@@ -1,10 +1,16 @@
-
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+    './index.html'
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -85,5 +91,4 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
-
 export default config;
